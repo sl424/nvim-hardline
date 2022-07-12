@@ -81,7 +81,7 @@ local inactive_ext = {
   high     = {guifg = '#8a8a8a', guibg = '#d0d0d0', ctermfg = '245', ctermbg = '252'},
   med      = {guifg = '#a8a8a8', guibg = '#ffffff', ctermfg = '255', ctermbg = '248'},
   low      = {guifg = '#8a8a8a', guibg = '#d0d0d0', ctermfg = '245', ctermbg = '252'},
-  modified = {guifg = '#df0000', guibg = '',        ctermfg = '160', ctermbg = ''},
+  modified = {guifg = '#df0000', guibg = '#d0d0d0', ctermfg = '160', ctermbg = '252'},
 }
 
 local colors = {

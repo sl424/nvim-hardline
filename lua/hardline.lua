@@ -122,12 +122,12 @@ end
 local function get_section_state(section, is_active)
   if M.options.theme_extended then
     local extended_class = {'low', 'med', 'high', 'mode'}
-    local mode = common.modes[fn.mode()] or common.modes['?']
+    local mode = common.modes[vim.fn.mode()] or common.modes['?']
     for _, eclass in ipairs(extended_class) do
       if eclass == section.class then
-        if common.is_active() then
+        if is_active then
           if eclass == 'mode' then
-            if o.paste and mode.state == 'insert' then return fmt('%s_paste', mode.state) end
+            if vim.o.paste and mode.state == 'insert' then return fmt('%s_paste', mode.state) end
             if vim.bo.modified then return fmt('%s_modified', mode.state) end
           end
           return mode.state
