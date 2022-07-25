@@ -133,8 +133,8 @@ local function get_section_state(section, is_active)
           return mode.state
         else --inactive
           if eclass == 'mode' then -- find inactive and modified
-            for nr = 1, fn.bufnr('$') do
-              if nr ~= fn.bufnr('%') and fn.getbufvar(nr, '&modified') == 1 then
+            for nr = 1, vim.fn.bufnr('$') do
+              if nr ~= vim.fn.bufnr('%') and vim.fn.getbufvar(nr, '&modified') == 1 then
                 return 'inactive_ext_modified'
               end
             end
